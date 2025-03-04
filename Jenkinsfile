@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     environment {
-        DOCKER_IMAGE = ''
+        DOCKER_IMAGE = 'Mamatha0124/my-flask-app:latest'
     }
     stages {
         stage('Clone Repository') {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Push Docker Image') {
             steps {
-                withDockerRegistry([credentialsId: '', url: '']) {
+                withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/']) {
                     sh 'docker push $DOCKER_IMAGE'
                 }
             }
