@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     environment {
-        DOCKER_IMAGE = 'Mamatha0124/my-flask-app:latest'
+        DOCKER_IMAGE = 'mamatha0124/my-flask-app:latest'
     }
     stages {
         stage('Clone Repository') {
