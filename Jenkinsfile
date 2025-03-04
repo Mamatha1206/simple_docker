@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/Mamatha1206/simple_docker.git',branch: main
+                git url: 'https://github.com/Mamatha1206/simple_docker.git',branch: 'main'
             }
         } 
         stage('Build Docker Image') {
